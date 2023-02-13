@@ -1,27 +1,14 @@
 <?php
-$num = 5;
-// Using if statement
-if ($num > 0) 
-{
-    $result = 'positive';
-}
+$n = 50;
+$first = 0;
+$second = 1;
 
-if ($num < 0) 
-{
-    $result = 'negative';
-    if( $num < -10) 
-    {
-        $result = 'value is below -10';
-    }
-}
-else 
-{
-    $result = 'its zero';
-}
+echo "The first $n terms of the Fibonacci sequence are: \n";
 
-echo PHP_EOL;
-
-//solution 
-//ternary nested operator 
-print $num > 0 ? 'positive':($num < 0?($num<-10?'value is below -10':'negative':'its zero');
-//print $num > 0 ? 'positive' : (( $num < 0 ? ( $num < -10 ? 'value is below -10' : 'negative' ) : 'its zero' ));
+for ($i = 0; $i < $n; $i++) 
+{
+    echo $first, " ";
+    $third = $first + $second;
+    $first = $second;
+    $second = $third;
+}
