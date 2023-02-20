@@ -103,7 +103,7 @@ function trim_array($array)
 }
 
 $trimed_array=trim_array($fruits);
-print_r($trimed_array);
+//print_r($trimed_array);
 
 /**
  * 4 Write a PHP function to check if a string contains only letters and whitespace.
