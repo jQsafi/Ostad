@@ -1,14 +1,20 @@
 <?php
-$n = 50;
-$first = 0;
-$second = 1;
+include "ns.php";
+use Html\Table as T;
+$table = new T();
+$table->title = "My table";
+$table->numRows = 5;
 
-echo "The first $n terms of the Fibonacci sequence are: \n";
+use Html\Row as R;
+$row = new R();
+$row->numCells = 5;
+?>
 
-for ($i = 0; $i < $n; $i++) 
-{
-    echo $first, " ";
-    $third = $first + $second;
-    $first = $second;
-    $second = $third;
-}
+<html>
+<body>
+
+<?php $table->message(); ?>
+<?php $row->message(); ?>
+
+</body>
+</html>
