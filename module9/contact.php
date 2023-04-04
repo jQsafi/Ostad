@@ -1,45 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>My Personal Blog - Contact Us</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<div class="container">
-			<img src="logo.png" alt="Logo">
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="blog.php">Blog</a></li>
-					<li><a href="contact.php">Contact</a></li>
-				</ul>
-			</nav>
+
+<div class="container">
+	<div class="row">
+	<div class="col-lg-3">&nbsp;</div>
+	<div class="col-lg-6">
+      <h1>Contact Us</h1>
+	  <?php
+	  if($_POST)
+	  {
+		?>
+		<div class="alert alert-success" role="alert">
+			Thanks for your feedback.
 		</div>
-	</header>
-	
-	<section id="contact">
-		<div class="container">
-			<h2>Contact Us</h2>
-			<form method="post" action="submit-form.php">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-				<label for="subject">Subject:</label>
-				<input type="text" id="subject" name="subject" required>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" required></textarea>
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</section>
-	
-	<footer>
-		<div class="container">
-			<p>&copy; 2023 My Personal Blog</p>
-		</div>
-	</footer>
-</body>
-</html>
+		<?php
+	  }
+	  ?>
+      <form action="" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+        </div>
+		<div class="form-group">
+          <label for="email">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+	  </div>
+    </div>
+	</div>

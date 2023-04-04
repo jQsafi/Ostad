@@ -1,13 +1,12 @@
-<?php
+I've faced a lots of challenge during making design. Because I'm backend developer.
+It was wasy to implrment programatical terms.
 
-/**
- * PHP Config
- */
-ini_set("display_errors",'0');
-//Site info
-$site_info=array(
+This array is heart of my project
+
+/*
+*$site_info=array(
     'title'=>'Shafayat Hossain',
-    'logo'=>'logo.png',
+    'logo'=>'https://p1.hiclipart.com/preview/870/79/792/fancy-letters-png-clipart.jpg',
     'categories'=>array('Tech','News','Politics','Games','Cricket'),
     'posts'=>array(
         "post-1"=>array(
@@ -53,28 +52,4 @@ $site_info=array(
         )
     )
 );
-function excerpt($title, $cutOffLength) {
-
-    $charAtPosition = "";
-    $titleLength = strlen($title);
-
-    do {
-        $cutOffLength++;
-        $charAtPosition = substr($title, $cutOffLength, 1);
-    } while ($cutOffLength < $titleLength && $charAtPosition != " ");
-
-    return substr($title, 0, $cutOffLength) . '...';
-
-}
-$page='home';
-if($_REQUEST['page'])
-$page=$_REQUEST['page'];
-$page_info=$site_info['page_info'][$page];
-include_once('header.php');
-?>
-<?php
-include_once($page.".php");
-?>
-<?php
-include_once('footer.php');
-?>
+*/
