@@ -1,0 +1,27 @@
+<div id="myLog">
+
+</div>
+<script>
+    window.console =
+{
+    log: function(str)
+    {
+        const para = document.createElement("p");
+        document.getElementById("myLog").innderHtml="";
+        var node = document.createElement("h3");
+        node.appendChild(document.createTextNode(str));
+        document.getElementById("myLog").appendChild(node);
+    }
+}
+    function multiplicationTable(num) {
+  if (typeof num !== 'bigint') {
+    num = BigInt(num);
+  }
+  for (let i = 1n; i <= 10n; i++) {
+    let product = num * i;
+    console.log(`${num} x ${i} = ${product}`);
+  }
+}
+multiplicationTable(5);
+
+</script>
