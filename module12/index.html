@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>BMI Calculator</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="cssanimation  leDoorCloseRight sequence">BMI Calculator</h1>
+		<form>
+			<label for="weightInput">Weight (kg):</label>
+			<input type="number" id="weightInput" required>
+			<label for="heightInput">Height (m):</label>
+			<input type="number" id="heightInput" step="0.01" required>
+			<button type="button" id="calculateBtn">Calculate</button>
+		</form>
+		<div id="result"></div>
+	</div>
+</body>
+</html>
+<script>
+    const calculateBtn = document.getElementById("calculateBtn");
+calculateBtn.addEventListener("click", calculateBMI);
+
+function calculateBMI() {
+    const weight = document.getElementById("weightInput").value;
+    const height = document.getElementById("heightInput").value;
+
+    const bmi = weight / (height * height);
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `Your BMI is ${bmi.toFixed(2)}`;
+}
+</script>
