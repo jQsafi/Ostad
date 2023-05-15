@@ -1,0 +1,29 @@
+যেভাবে সেটাপ করেছিঃ 
+প্রথমে composer সেটাপ করেছি।
+তারপর লারাভেল সেটাপ কমান্ড composer create-project laravel/laravel module13 রান করেছি। 
+লারাভেল যে ডিরেক্টরীতে আছে সেই ডিরেক্টরীতে php artisan serve কমান্ড দিয়েছি। 
+ব্রাউজারে http://localhost:8000/ ওপেন করেছি। 
+
+ফোল্ডার/ডিরেক্টরী গুলোর কাজঃ 
+
+app folder: This folder contains the core application files and logic. It includes various sub-folders such as Http for controllers, Models for database models, Providers for service providers, and Console for artisan commands.
+
+bootstrap folder: This folder contains the files responsible for bootstrapping the Laravel application. It includes the app.php file, which initializes the application and its dependencies, as well as the cache and config sub-folders.
+
+config folder: This folder contains the configuration files for the Laravel application. It includes files for the application, the database, the mail system, and many other features.
+
+database folder: This folder contains the database migration files and seeds. It includes sub-folders for migrations, seeds, and factories.
+
+public folder: This folder contains the front-end files for the Laravel application, including the index.php file that serves as the entry point for the application. It also includes the assets sub-folder for storing public assets such as images and CSS files.
+
+resources folder: This folder contains the resources used by the Laravel application, including the views, language files, and assets such as images and CSS files.
+
+routes folder: This folder contains the route definition files for the Laravel application. It includes the web.php file for handling web requests and the api.php file for handling API requests.
+
+storage folder: This folder contains the files generated and used by the Laravel application at runtime, including the logs, sessions, and caches. It includes sub-folders for app, framework, and logs.
+
+tests folder: This folder contains the unit and feature tests for the Laravel application. It includes sub-folders for Feature and Unit tests.
+
+vendor folder: This folder contains the dependencies installed by Composer for the Laravel application, including the Laravel framework itself and any third-party packages installed via Composer.
+
+
