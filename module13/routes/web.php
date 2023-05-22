@@ -1,6 +1,4 @@
 <?php
-
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ResponseController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login',[ResponseController::class,'remember']);
 Route::get('/submit',[ResponseController::class,'email_handle']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/hello', function () {
+    return view('hello');
+});

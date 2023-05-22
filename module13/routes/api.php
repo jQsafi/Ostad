@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\NameController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ResponseController;
@@ -16,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
 
 Route::post('/name',[NameController::class,'name_request']);
 Route::get('/page',[PageController::class,'pageRequest']);
